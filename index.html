@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ cho thuê xe đạp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cho thuê xe đạp</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#booking">Đặt xe</a></li>
+                <li><a href="#tracking">Theo dõi đơn hàng</a></li>
+                <li><a href="#cart">Giỏ hàng</a></li>
+                <li><a href="#comments">Ý kiến khách hàng</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Chào mừng đến với dịch vụ cho thuê xe đạp</h2>
+        <p>Chúng tôi cung cấp các loại xe đạp chất lượng cao với giá cả hợp lý.</p>
+    </section>
+
+    <section id="booking">
+        <h2>Đặt xe</h2>
+        <form action="submit_booking.php" method="POST">
+            <label for="bikeType">Loại xe:</label>
+            <select id="bikeType" name="bikeType">
+                <option value="mountain">Xe đạp địa hình</option>
+                <option value="road">Xe đạp đường trường</option>
+            </select>
+            <label for="rentalPeriod">Thời gian thuê:</label>
+            <input type="date" id="rentalPeriod" name="rentalPeriod">
+            <label for="customerName">Tên khách hàng:</label>
+            <input type="text" id="customerName" name="customerName" required>
+            <button type="submit">Đặt xe</button>
+        </form>
+    </section>
+
+    <section id="tracking">
+        <h2>Theo dõi đơn hàng</h2>
+        <form action="track_order.php" method="GET">
+            <label for="orderId">Mã đơn hàng:</label>
+            <input type="text" id="orderId" name="orderId" required>
+            <button type="submit">Theo dõi</button>
+        </form>
+    </section>
+
+    <section id="cart">
+        <h2>Giỏ hàng</h2>
+        <p>Danh sách sản phẩm đã chọn sẽ hiển thị ở đây.</p>
+    </section>
+
+    <section id="comments">
+        <h2>Ý kiến khách hàng</h2>
+        <form action="submit_comment.php" method="POST">
+            <label for="customerComment">Ý kiến của bạn:</label>
+            <textarea id="customerComment" name="customerComment" required></textarea>
+            <button type="submit">Gửi ý kiến</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Liên hệ: info@yourwebsite.com</p>
+    </footer>
+</body>
+</html>
